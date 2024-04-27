@@ -29,7 +29,7 @@ http.createServer(async (req,res)=>{
             console.log("Error in connecting database",err);
         }
         finally{
-            await client.connect();
+            await client.close();
             console.log("Database is closed");
         }
     }
